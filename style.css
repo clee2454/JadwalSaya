@@ -1114,4 +1114,187 @@ footer {
 
         gap: 15px;
     }
+
+    /* =========================================
+   MOBILE RESPONSIVE SCHEDULE
+========================================= */
+
+@media (max-width: 600px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .navbar {
+        padding: 16px 18px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .today-button {
+        font-size: 12px;
+        padding: 9px 13px;
+    }
+
+
+    /* HERO */
+
+    .schedule-header {
+        padding: 28px 18px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .schedule-header h1 {
+        font-size: 34px;
+        line-height: 1.05;
+    }
+
+    .schedule-header p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .selected-day-card {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+
+    /* CALENDAR */
+
+    .schedule-container {
+        margin: 0 12px;
+        padding: 8px;
+        overflow: hidden;
+    }
+
+    .schedule {
+        width: 100%;
+        min-width: 0 !important;
+        overflow: visible;
+    }
+
+
+    /* TIME COLUMN */
+
+    .time-header {
+        width: 52px;
+        min-width: 52px;
+    }
+
+    .time {
+        width: 52px;
+        min-width: 52px;
+        font-size: 10px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        padding-top: 6px;
+        box-sizing: border-box;
+    }
+
+
+    /* DAY HEADER */
+
+    .day-header {
+        min-width: 0 !important;
+        width: 100%;
+        padding: 12px 6px;
+    }
+
+    .day-header span {
+        font-size: 10px;
+    }
+
+    .day-header strong {
+        font-size: 13px;
+    }
+
+
+    /* TIME SLOTS */
+
+    .slot {
+        min-width: 0 !important;
+        width: 100%;
+        height: 64px;
+    }
+
+
+    /* SCHEDULE EVENT */
+
+    .schedule-event {
+        left: 4px;
+        right: 4px;
+
+        padding: 7px;
+
+        border-radius: 8px;
+
+        overflow: hidden;
+    }
+
+    .event-title {
+        font-size: 12px;
+        line-height: 1.2;
+    }
+
+    .event-time {
+        font-size: 9px;
+        margin-top: 3px;
+    }
+
+    .event-notes {
+        font-size: 9px;
+        margin-top: 3px;
+    }
+
+
+    /* LEGEND */
+
+    .legend {
+        margin: 20px 18px;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .legend-item {
+        font-size: 11px;
+    }
+
+
+    /* MODAL */
+
+    .modal {
+        width: calc(100% - 28px);
+        max-height: 90vh;
+        overflow-y: auto;
+        padding: 22px;
+        box-sizing: border-box;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-actions {
+        gap: 8px;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        padding: 30px 18px;
+        text-align: center;
+    }
+
+}
 }
