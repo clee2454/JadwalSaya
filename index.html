@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Weekly Schedule</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- BACKGROUND -->
+
+    <div class="background">
+
+        <div class="orb orb-1"></div>
+
+        <div class="orb orb-2"></div>
+
+        <div class="grid"></div>
+
+    </div>
+
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <a
+            href="#"
+            class="logo"
+        >
+            S<span>C</span>HEDULE
+        </a>
+
+
+        <nav class="nav-links">
+
+            <a
+                href="#"
+                class="active"
+            >
+                Week
+            </a>
+
+            <a href="#">
+                Tasks
+            </a>
+
+        </nav>
+
+
+        <button
+            class="today-button"
+            id="clearSelectionButton"
+        >
+            All Days
+        </button>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- HERO -->
+
+        <section class="schedule-header">
+
+            <div>
+
+                <div class="eyebrow">
+
+                    <span class="status-dot"></span>
+
+                    WEEKLY RECURRING SCHEDULE
+
+                </div>
+
+
+                <h1>
+
+                    Your week,
+                    <span>organized.</span>
+
+                </h1>
+
+
+                <p>
+
+                    Build a recurring weekly schedule for
+                    classes, studying, work, and personal activities.
+
+                </p>
+
+            </div>
+
+
+            <div class="selected-day-card">
+
+                <span>
+                    SELECTED DAY
+                </span>
+
+                <strong id="selectedDayLabel">
+                    Monday
+                </strong>
+
+                <small>
+                    Click a day below to switch
+                </small>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- CALENDAR -->
+
+        <section class="schedule-container">
+
+            <div
+                class="schedule"
+                id="schedule"
+            >
+
+                <!-- JavaScript generates the grid -->
+
+            </div>
+
+        </section>
+
+
+
+        <!-- LEGEND -->
+
+        <section class="legend">
+
+            <div class="legend-item">
+
+                <span class="legend-dot study"></span>
+
+                Study
+
+            </div>
+
+
+            <div class="legend-item">
+
+                <span class="legend-dot work"></span>
+
+                Work
+
+            </div>
+
+
+            <div class="legend-item">
+
+                <span class="legend-dot personal"></span>
+
+                Personal
+
+            </div>
+
+
+            <div class="legend-item">
+
+                <span class="legend-dot other"></span>
+
+                Other
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- MODAL -->
+
+    <div
+        class="modal-overlay"
+        id="modalOverlay"
+    >
+
+        <div class="modal">
+
+
+            <button
+                class="close-modal"
+                id="closeModal"
+            >
+                ×
+            </button>
+
+
+            <span class="modal-label">
+                WEEKLY SCHEDULE
+            </span>
+
+
+            <h2 id="modalTitle">
+                Add Schedule
+            </h2>
+
+
+            <form id="scheduleForm">
+
+
+                <input
+                    type="hidden"
+                    id="scheduleId"
+                >
+
+
+                <div class="form-group">
+
+                    <label>
+                        Activity
+                    </label>
+
+                    <input
+                        type="text"
+                        id="activity"
+                        placeholder="e.g. Mathematics"
+                        required
+                    >
+
+                </div>
+
+
+
+                <div class="form-row">
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Day
+                        </label>
+
+                        <select id="day">
+
+                            <option value="0">
+                                Monday
+                            </option>
+
+                            <option value="1">
+                                Tuesday
+                            </option>
+
+                            <option value="2">
+                                Wednesday
+                            </option>
+
+                            <option value="3">
+                                Thursday
+                            </option>
+
+                            <option value="4">
+                                Friday
+                            </option>
+
+                            <option value="5">
+                                Saturday
+                            </option>
+
+                            <option value="6">
+                                Sunday
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Category
+                        </label>
+
+                        <select id="category">
+
+                            <option value="study">
+                                Study
+                            </option>
+
+                            <option value="work">
+                                Work
+                            </option>
+
+                            <option value="personal">
+                                Personal
+                            </option>
+
+                            <option value="other">
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="form-row">
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Start
+                        </label>
+
+                        <input
+                            type="time"
+                            id="startTime"
+                            min="06:00"
+                            max="22:00"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            End
+                        </label>
+
+                        <input
+                            type="time"
+                            id="endTime"
+                            min="06:00"
+                            max="23:00"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label>
+                        Notes
+                    </label>
+
+                    <textarea
+                        id="notes"
+                        placeholder="Optional notes..."
+                    ></textarea>
+
+                </div>
+
+
+
+                <div class="modal-actions">
+
+                    <button
+                        type="button"
+                        class="delete-button"
+                        id="deleteButton"
+                    >
+                        Delete
+                    </button>
+
+
+                    <button
+                        type="submit"
+                        class="save-button"
+                    >
+                        Save Schedule
+                    </button>
+
+                </div>
+
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-logo">
+
+            S<span>C</span>HEDULE
+
+        </div>
+
+
+        <p>
+            One week. Repeat. Stay consistent.
+        </p>
+
+
+        <span>
+            WEEKLY PLANNER
+        </span>
+
+    </footer>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
