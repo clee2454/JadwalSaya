@@ -182,7 +182,7 @@ function renderCalendar() {
     */
 
     scheduleElement.style.gridTemplateColumns =
-        `70px repeat(${visibleDays.length}, minmax(150px, 1fr))`;
+    `52px repeat(${visibleDays.length}, minmax(0, 1fr))`;
 
 
     /* =====================================
