@@ -1297,4 +1297,256 @@ footer {
     }
 
 }
+   /* =========================================
+   IPHONE TYPOGRAPHY & MOBILE POLISH
+========================================= */
+
+@media (max-width: 600px) {
+
+    /* General mobile typography */
+
+    body {
+        font-family: "DM Sans", sans-serif;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+    }
+
+
+    /* -----------------------------------------
+       HEADER
+    ----------------------------------------- */
+
+    .schedule-header h1 {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 32px;
+        line-height: 1.08;
+        letter-spacing: -0.8px;
+    }
+
+    .schedule-header p {
+        font-size: 14px;
+        line-height: 1.55;
+        letter-spacing: -0.1px;
+    }
+
+    .eyebrow {
+        font-size: 10px;
+        letter-spacing: 0.7px;
+        font-weight: 600;
+    }
+
+
+    /* -----------------------------------------
+       SELECTED DAY CARD
+    ----------------------------------------- */
+
+    .selected-day-card span {
+        font-size: 9px;
+        letter-spacing: 1px;
+        font-weight: 700;
+    }
+
+    .selected-day-card strong {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 21px;
+        line-height: 1.2;
+    }
+
+    .selected-day-card small {
+        font-size: 11px;
+        line-height: 1.4;
+    }
+
+
+    /* -----------------------------------------
+       DAY HEADER
+    ----------------------------------------- */
+
+    .day-header {
+        font-family: "DM Sans", sans-serif;
+        line-height: 1.1;
+    }
+
+    .day-header span {
+        display: block;
+        font-size: 9px;
+        font-weight: 700;
+        letter-spacing: 0.7px;
+        margin-bottom: 4px;
+    }
+
+    .day-header strong {
+        display: block;
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: -0.2px;
+        white-space: nowrap;
+    }
+
+
+    /* -----------------------------------------
+       TIME COLUMN
+    ----------------------------------------- */
+
+    .time {
+        font-family: "DM Sans", sans-serif;
+        font-size: 10px;
+        font-weight: 600;
+        letter-spacing: -0.1px;
+        color: #7c8494;
+        white-space: nowrap;
+    }
+
+
+    /* -----------------------------------------
+       SCHEDULE EVENTS
+    ----------------------------------------- */
+
+    .schedule-event {
+        font-family: "DM Sans", sans-serif;
+        box-sizing: border-box;
+
+        padding: 7px 8px;
+
+        overflow: hidden;
+        word-break: normal;
+        overflow-wrap: break-word;
+    }
+
+    .event-title {
+        font-family: "DM Sans", sans-serif;
+        font-size: 11px;
+        font-weight: 700;
+        line-height: 1.25;
+
+        letter-spacing: -0.15px;
+
+        overflow: hidden;
+
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+    }
+
+    .event-time {
+        font-family: "DM Sans", sans-serif;
+        font-size: 9px;
+        font-weight: 500;
+        line-height: 1.2;
+
+        margin-top: 4px;
+
+        white-space: nowrap;
+    }
+
+    .event-notes {
+        font-family: "DM Sans", sans-serif;
+        font-size: 9px;
+        line-height: 1.25;
+
+        margin-top: 4px;
+
+        overflow: hidden;
+
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+    }
+
+
+    /* -----------------------------------------
+       LEGEND
+    ----------------------------------------- */
+
+    .legend-item {
+        font-family: "DM Sans", sans-serif;
+        font-size: 11px;
+        font-weight: 500;
+    }
+
+
+    /* -----------------------------------------
+       MODAL
+    ----------------------------------------- */
+
+    .modal {
+        font-family: "DM Sans", sans-serif;
+    }
+
+    .modal h2 {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 24px;
+        letter-spacing: -0.5px;
+    }
+
+    .modal-label {
+        font-size: 9px;
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+
+    .form-group label {
+        font-size: 11px;
+        font-weight: 600;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-family: "DM Sans", sans-serif;
+        font-size: 14px;
+    }
+
+    .save-button,
+    .delete-button {
+        font-family: "DM Sans", sans-serif;
+        font-size: 13px;
+        font-weight: 600;
+    }
+
+
+    /* -----------------------------------------
+       NAVBAR
+    ----------------------------------------- */
+
+    .logo {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 17px;
+        font-weight: 700;
+        letter-spacing: 0.4px;
+    }
+
+    .today-button {
+        font-family: "DM Sans", sans-serif;
+        font-size: 11px;
+        font-weight: 600;
+    }
+
+
+    /* -----------------------------------------
+       FOOTER
+    ----------------------------------------- */
+
+    footer {
+        font-family: "DM Sans", sans-serif;
+    }
+
+    .footer-logo {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    footer p {
+        font-size: 11px;
+        line-height: 1.5;
+    }
+
+    footer > span {
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+}
 }
