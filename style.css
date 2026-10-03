@@ -1642,4 +1642,358 @@ footer {
 
         letter-spacing: 1px;
     }
+    /* =====================================================
+   FINAL MOBILE COLUMN POLISH
+   Designed for narrow phones like iPhone 12 Pro
+===================================================== */
+
+@media (max-width: 600px) {
+
+    /* -----------------------------------------
+       CALENDAR CONTAINER
+    ----------------------------------------- */
+
+    .schedule-container {
+        width: calc(100% - 24px);
+        margin: 0 12px;
+
+        padding: 8px;
+
+        overflow: hidden;
+
+        border-radius: 18px;
+    }
+
+
+    /* -----------------------------------------
+       GRID
+    ----------------------------------------- */
+
+    .schedule {
+
+        width: 100%;
+        min-width: 0 !important;
+
+        grid-template-columns:
+            50px repeat(7, minmax(0, 1fr));
+
+        overflow: visible;
+    }
+
+
+    /* -----------------------------------------
+       TOP-LEFT CORNER
+    ----------------------------------------- */
+
+    .time-header {
+
+        width: 50px;
+        min-width: 50px;
+
+        height: 76px;
+    }
+
+
+    /* -----------------------------------------
+       DAY COLUMNS
+    ----------------------------------------- */
+
+    .day-header {
+
+        width: 100%;
+        min-width: 0;
+
+        height: 76px;
+
+        padding: 8px 2px;
+
+        gap: 4px;
+
+        overflow: hidden;
+
+        text-align: center;
+    }
+
+
+    /* DAY ABBREVIATION
+       MON / TUE / WED...
+    */
+
+    .day-header span {
+
+        font-size: 8px;
+
+        line-height: 1;
+
+        letter-spacing: 0.5px;
+
+        white-space: nowrap;
+    }
+
+
+    /* FULL DAY NAME
+       Monday -> Mon
+       Tuesday -> Tue
+       etc.
+    */
+
+    .day-header strong {
+
+        width: 100%;
+
+        font-family: "DM Sans", sans-serif;
+
+        font-size: 9px;
+
+        font-weight: 600;
+
+        line-height: 1.1;
+
+        letter-spacing: -0.2px;
+
+        white-space: normal;
+
+        overflow: hidden;
+
+        text-overflow: ellipsis;
+
+        text-align: center;
+    }
+
+
+    /* -----------------------------------------
+       TIME COLUMN
+    ----------------------------------------- */
+
+    .time {
+
+        width: 50px;
+        min-width: 50px;
+
+        height: 64px;
+
+        padding-top: 8px;
+
+        font-family: "DM Sans", sans-serif;
+
+        font-size: 9px;
+
+        font-weight: 600;
+
+        line-height: 1;
+
+        white-space: nowrap;
+
+        overflow: visible;
+
+        text-align: center;
+    }
+
+
+    /* -----------------------------------------
+       EMPTY SLOTS
+    ----------------------------------------- */
+
+    .slot {
+
+        width: 100%;
+        min-width: 0;
+
+        height: 64px;
+
+        overflow: visible;
+    }
+
+
+    /* -----------------------------------------
+       EVENTS
+    ----------------------------------------- */
+
+    .schedule-event {
+
+        left: 2px;
+        right: 2px;
+
+        padding: 5px 4px;
+
+        border-radius: 7px;
+
+        overflow: hidden;
+
+        word-break: normal;
+
+        overflow-wrap: anywhere;
+
+        box-sizing: border-box;
+    }
+
+
+    /* -----------------------------------------
+       EVENT TITLE
+    ----------------------------------------- */
+
+    .event-title {
+
+        width: 100%;
+
+        font-family: "DM Sans", sans-serif;
+
+        font-size: 9px;
+
+        font-weight: 700;
+
+        line-height: 1.15;
+
+        letter-spacing: -0.15px;
+
+        white-space: normal;
+
+        overflow-wrap: anywhere;
+
+        word-break: normal;
+
+        display: -webkit-box;
+
+        -webkit-box-orient: vertical;
+
+        -webkit-line-clamp: 2;
+
+        overflow: hidden;
+    }
+
+
+    /* -----------------------------------------
+       EVENT TIME
+    ----------------------------------------- */
+
+    .event-time {
+
+        width: 100%;
+
+        margin-top: 3px;
+
+        font-family: "DM Sans", sans-serif;
+
+        font-size: 7.5px;
+
+        font-weight: 500;
+
+        line-height: 1.15;
+
+        white-space: normal;
+
+        overflow-wrap: anywhere;
+
+        word-break: normal;
+
+        display: -webkit-box;
+
+        -webkit-box-orient: vertical;
+
+        -webkit-line-clamp: 2;
+
+        overflow: hidden;
+    }
+
+
+    /* -----------------------------------------
+       EVENT NOTES
+    ----------------------------------------- */
+
+    .event-notes {
+
+        width: 100%;
+
+        margin-top: 3px;
+
+        font-size: 7px;
+
+        line-height: 1.15;
+
+        display: -webkit-box;
+
+        -webkit-box-orient: vertical;
+
+        -webkit-line-clamp: 2;
+
+        overflow: hidden;
+
+        overflow-wrap: anywhere;
+    }
+
+
+    /* -----------------------------------------
+       PREVENT EVENT HOVER SCALE ON TOUCH
+    ----------------------------------------- */
+
+    .schedule-event:hover {
+
+        transform: none;
+
+        filter: none;
+    }
+
+
+    /* -----------------------------------------
+       TIME + EVENT VISUAL BALANCE
+    ----------------------------------------- */
+
+    .schedule-event {
+
+        min-height: 30px;
+    }
+
+
+    /* -----------------------------------------
+       HERO / HEADER
+    ----------------------------------------- */
+
+    .schedule-header h1 {
+
+        font-size: 32px;
+
+        line-height: 1.05;
+
+        letter-spacing: -1px;
+    }
+
+    .schedule-header p {
+
+        font-size: 14px;
+
+        line-height: 1.5;
+    }
+
+
+    /* -----------------------------------------
+       SELECTED DAY CARD
+    ----------------------------------------- */
+
+    .selected-day-card {
+
+        width: 100%;
+
+        padding: 20px;
+
+        border-radius: 18px;
+    }
+
+
+    /* -----------------------------------------
+       LEGEND
+    ----------------------------------------- */
+
+    .legend {
+
+        margin: 20px 18px;
+
+        gap: 10px 14px;
+    }
+
+    .legend-item {
+
+        font-size: 10px;
+    }
+
+}
 }
