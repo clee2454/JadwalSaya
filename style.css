@@ -1098,47 +1098,37 @@ footer {
    IPHONE / SMALL MOBILE
 ===================================================== */
 
-@media (max-width: 600px) {
+/* =====================================================
+   MOBILE — IPHONE COMPACT SCHEDULE
+===================================================== */
 
-    /* -----------------------------------------
-       GENERAL
-    ----------------------------------------- */
+@media (max-width: 600px) {
 
     body {
         overflow-x: hidden;
-
-        font-family: "DM Sans", Arial, sans-serif;
-
         -webkit-font-smoothing: antialiased;
-
         text-rendering: optimizeLegibility;
     }
 
 
-    /* -----------------------------------------
+    /* =================================================
        NAVBAR
-    ----------------------------------------- */
+    ================================================= */
 
     .navbar {
-        width: calc(100% - 24px);
+        width: calc(100% - 30px);
+        height: 58px;
 
-        height: 60px;
+        margin: 15px auto;
 
-        margin: 12px auto;
-
-        padding: 0 10px 0 16px;
+        padding: 0 12px 0 18px;
 
         border-radius: 30px;
     }
 
     .logo {
-        font-family: "Space Grotesk", Arial, sans-serif;
-
-        font-size: 17px;
-
-        font-weight: 700;
-
-        letter-spacing: -0.5px;
+        font-size: 16px;
+        letter-spacing: 0;
     }
 
     .nav-links {
@@ -1146,24 +1136,21 @@ footer {
     }
 
     .today-button {
-        padding: 9px 14px;
+        padding: 8px 12px;
 
-        font-family: "DM Sans", Arial, sans-serif;
-
-        font-size: 11px;
-
-        font-weight: 600;
+        font-size: 10px;
     }
 
 
-    /* -----------------------------------------
+    /* =================================================
        HERO
-    ----------------------------------------- */
+    ================================================= */
 
     .schedule-header {
-        width: calc(100% - 36px);
 
-        margin: 55px auto 35px;
+        width: calc(100% - 40px);
+
+        margin: 25px auto 35px;
 
         padding: 0;
 
@@ -1173,94 +1160,85 @@ footer {
 
         align-items: stretch;
 
-        gap: 24px;
+        gap: 22px;
     }
+
 
     .eyebrow {
+
+        width: fit-content;
+
         padding: 7px 11px;
 
-        font-size: 9px;
+        font-size: 8px;
 
-        font-weight: 600;
-
-        letter-spacing: 0.8px;
+        letter-spacing: 1px;
     }
 
-    .status-dot {
-        width: 6px;
-        height: 6px;
-    }
 
     .schedule-header h1 {
-        margin-top: 20px;
 
-        font-family: "Space Grotesk", Arial, sans-serif;
+        margin-top: 18px;
 
         font-size: 34px;
 
-        line-height: 1.05;
+        line-height: 1.02;
 
         letter-spacing: -1.5px;
     }
 
+
     .schedule-header p {
-        max-width: 100%;
+
+        max-width: none;
 
         margin-top: 18px;
 
-        font-size: 14px;
+        font-size: 13px;
 
         line-height: 1.55;
-
-        letter-spacing: -0.1px;
     }
 
 
-    /* -----------------------------------------
-       SELECTED DAY
-    ----------------------------------------- */
+    /* =================================================
+       TODAY CARD
+    ================================================= */
 
     .selected-day-card {
+
         width: 100%;
 
         min-width: 0;
 
-        padding: 22px;
+        padding: 20px;
 
         border-radius: 18px;
     }
 
     .selected-day-card span {
-        font-size: 9px;
 
-        letter-spacing: 1.2px;
+        font-size: 8px;
 
-        font-weight: 700;
+        letter-spacing: 1.5px;
     }
 
     .selected-day-card strong {
-        margin-top: 10px;
 
-        font-family: "Space Grotesk", Arial, sans-serif;
+        margin-top: 9px;
 
-        font-size: 21px;
-
-        line-height: 1.2;
-
-        letter-spacing: -0.4px;
+        font-size: 20px;
     }
 
     .selected-day-card small {
-        margin-top: 8px;
 
-        font-size: 11px;
+        margin-top: 7px;
 
-        line-height: 1.4;
+        font-size: 10px;
     }
 
 
     /* =================================================
-       MOBILE CALENDAR
+       SCHEDULE CONTAINER
     ================================================= */
 
     .schedule-container {
@@ -1269,265 +1247,254 @@ footer {
 
         margin: 0 12px;
 
-        padding: 8px;
+        padding: 7px;
 
-        /*
-         * Keep the whole week visible.
-         */
         overflow: hidden;
 
         border-radius: 18px;
     }
 
+
+    /* =================================================
+       IMPORTANT:
+       FORCE ALL 7 DAYS INTO SCREEN
+    ================================================= */
+
     .schedule {
 
-        /*
-         * IMPORTANT:
-         * Do NOT give the calendar a desktop min-width.
-         */
-        width: 100%;
+        width: 100% !important;
 
         min-width: 0 !important;
 
+        display: grid;
+
         grid-template-columns:
-            48px repeat(7, minmax(0, 1fr));
+            39px
+            repeat(7, minmax(0, 1fr)) !important;
     }
 
 
-    /* -----------------------------------------
-       TOP LEFT / TIME COLUMN
-    ----------------------------------------- */
+    /* =================================================
+       TOP LEFT
+    ================================================= */
 
     .time-header {
-        width: 48px;
 
-        min-width: 48px;
+        width: auto;
 
-        height: 80px;
-    }
+        min-width: 0;
 
-    .time {
-
-        width: 48px;
-
-        min-width: 48px;
-
-        height: 64px;
-
-        padding-top: 10px;
-
-        font-family: "DM Sans", Arial, sans-serif;
-
-        font-size: 9px;
-
-        font-weight: 600;
-
-        letter-spacing: -0.2px;
-
-        color: #7c8494;
-
-        white-space: nowrap;
+        height: 70px;
     }
 
 
-    /* -----------------------------------------
-       DAY HEADER
-    ----------------------------------------- */
+    /* =================================================
+       DAY HEADERS
+    ================================================= */
 
     .day-header {
 
-        width: 100%;
+        width: auto;
 
         min-width: 0 !important;
 
-        height: 80px;
+        height: 70px;
 
-        padding: 8px 2px;
+        padding: 6px 2px;
 
-        display: flex;
-
-        flex-direction: column;
-
-        align-items: center;
-
-        justify-content: center;
-
-        gap: 4px;
+        gap: 3px;
 
         overflow: hidden;
 
-        text-align: center;
+        border-right: 1px solid #e2e5e9;
     }
+
 
     .day-header span {
 
-        display: block;
+        font-size: 7px;
 
-        font-family: "DM Sans", Arial, sans-serif;
-
-        font-size: 8px;
-
-        font-weight: 700;
-
-        letter-spacing: 0.6px;
+        letter-spacing: 0.4px;
 
         line-height: 1;
 
-        color: #9097a1;
-
         white-space: nowrap;
     }
+
 
     .day-header strong {
 
         display: block;
 
-        width: 100%;
+        max-width: 100%;
 
-        font-family: "DM Sans", Arial, sans-serif;
+        overflow: hidden;
+
+        white-space: nowrap;
+
+        text-overflow: clip;
+
+        font-size: 7px;
+
+        line-height: 1;
+
+        letter-spacing: -0.35px;
+
+        text-align: center;
+    }
+
+
+    /* =================================================
+       TIME COLUMN
+    ================================================= */
+
+    .time {
+
+        width: auto;
+
+        min-width: 0;
+
+        height: 64px;
+
+        padding-top: 9px;
 
         font-size: 8px;
 
         font-weight: 600;
 
-        letter-spacing: -0.1px;
-
-        line-height: 1.1;
-
-        color: #4e5560;
-
         white-space: nowrap;
-
-        overflow: hidden;
-
-        text-overflow: clip;
-    }
-
-
-    /* SELECTED DAY */
-
-    .day-header.selected {
-        background: #5967d8;
-    }
-
-    .day-header.selected span {
-        color: #dfe3ff;
-    }
-
-    .day-header.selected strong {
-        color: #ffffff;
-    }
-
-
-    /* -----------------------------------------
-       SLOTS
-    ----------------------------------------- */
-
-    .slot {
-
-        width: 100%;
-
-        min-width: 0 !important;
-
-        height: 64px;
-    }
-
-
-    /* -----------------------------------------
-       EVENTS
-    ----------------------------------------- */
-
-    .schedule-event {
-
-        left: 3px;
-
-        right: 3px;
-
-        padding: 6px 4px;
-
-        border-radius: 7px;
-
-        overflow: hidden;
 
         text-align: center;
     }
 
+
+    /* =================================================
+       EMPTY SLOTS
+    ================================================= */
+
+    .slot {
+
+        width: auto;
+
+        min-width: 0 !important;
+
+        height: 64px;
+
+        overflow: visible;
+    }
+
+
+    /* =================================================
+       EVENTS
+    ================================================= */
+
+    .schedule-event {
+
+        left: 2px;
+
+        right: 2px;
+
+        padding: 5px 3px;
+
+        border-radius: 6px;
+
+        overflow: hidden;
+
+        word-break: normal;
+
+        overflow-wrap: anywhere;
+
+        text-align: center;
+    }
+
+
     .event-title {
 
-        font-family: "DM Sans", Arial, sans-serif;
-
-        font-size: 9px;
+        font-size: 8px;
 
         font-weight: 700;
 
         line-height: 1.15;
 
-        letter-spacing: -0.1px;
-
-        text-align: center;
-
-        overflow: hidden;
+        letter-spacing: -0.15px;
 
         display: -webkit-box;
 
         -webkit-box-orient: vertical;
 
         -webkit-line-clamp: 2;
+
+        overflow: hidden;
     }
+
 
     .event-time {
 
         margin-top: 3px;
 
-        font-family: "DM Sans", Arial, sans-serif;
-
         font-size: 7px;
-
-        font-weight: 500;
 
         line-height: 1.1;
 
-        text-align: center;
-
         white-space: nowrap;
+
+        overflow: hidden;
     }
+
 
     .event-notes {
 
-        display: none;
+        margin-top: 3px;
+
+        font-size: 7px;
+
+        line-height: 1.15;
+
+        display: -webkit-box;
+
+        -webkit-box-orient: vertical;
+
+        -webkit-line-clamp: 2;
+
+        overflow: hidden;
     }
 
 
-    /* -----------------------------------------
+    /* =================================================
        LEGEND
-    ----------------------------------------- */
+    ================================================= */
 
     .legend {
 
         width: calc(100% - 36px);
 
-        margin: 20px auto 60px;
+        margin: 18px auto 50px;
 
         justify-content: flex-start;
 
-        gap: 12px;
+        gap: 10px;
 
         flex-wrap: wrap;
     }
 
     .legend-item {
 
-        font-family: "DM Sans", Arial, sans-serif;
+        font-size: 9px;
 
-        font-size: 11px;
+        gap: 5px;
+    }
 
-        font-weight: 500;
+    .legend-dot {
+
+        width: 7px;
+
+        height: 7px;
     }
 
 
-    /* -----------------------------------------
+    /* =================================================
        MODAL
-    ----------------------------------------- */
+    ================================================= */
 
     .modal {
 
@@ -1540,48 +1507,22 @@ footer {
         border-radius: 20px;
 
         overflow-y: auto;
-
-        font-family: "DM Sans", Arial, sans-serif;
     }
 
-    .modal h2 {
 
-        font-family: "Space Grotesk", Arial, sans-serif;
+    .modal h2 {
 
         font-size: 24px;
 
         letter-spacing: -0.5px;
     }
 
-    .modal-label {
-
-        font-size: 9px;
-
-        font-weight: 700;
-
-        letter-spacing: 1px;
-    }
 
     .form-row {
 
         grid-template-columns: 1fr;
     }
 
-    .form-group label {
-
-        font-size: 11px;
-
-        font-weight: 600;
-    }
-
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-
-        font-family: "DM Sans", Arial, sans-serif;
-
-        font-size: 14px;
-    }
 
     .modal-actions {
 
@@ -1590,20 +1531,19 @@ footer {
         gap: 8px;
     }
 
+
     .save-button,
     .delete-button {
 
         width: 100%;
 
-        font-family: "DM Sans", Arial, sans-serif;
-
         font-size: 13px;
     }
 
 
-    /* -----------------------------------------
+    /* =================================================
        FOOTER
-    ----------------------------------------- */
+    ================================================= */
 
     footer {
 
@@ -1620,28 +1560,29 @@ footer {
         text-align: center;
     }
 
+
     .footer-logo {
 
-        font-family: "Space Grotesk", Arial, sans-serif;
-
-        font-size: 18px;
-
-        font-weight: 700;
+        font-size: 17px;
     }
+
 
     footer p {
 
-        font-size: 11px;
+        font-size: 10px;
 
         line-height: 1.5;
     }
 
+
     footer > span {
 
-        font-size: 9px;
+        font-size: 8px;
 
         letter-spacing: 1px;
     }
+
+}
     /* =====================================================
    FINAL MOBILE COLUMN POLISH
    Designed for narrow phones like iPhone 12 Pro
@@ -1994,6 +1935,54 @@ footer {
 
         font-size: 10px;
     }
+
+    /* =====================================================
+   LIVE TODAY BUTTON
+===================================================== */
+
+.today-button {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+#todayLabel {
+    font-weight: 600;
+}
+
+#liveTime {
+    padding-left: 9px;
+
+    border-left: 1px solid rgba(255, 255, 255, 0.25);
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 500;
+
+    font-variant-numeric: tabular-nums;
+
+    opacity: 0.85;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .today-button {
+        gap: 7px;
+
+        padding: 9px 12px;
+    }
+
+    #liveTime {
+        padding-left: 7px;
+
+        font-size: 10px;
+    }
+}
 
 }
 }
