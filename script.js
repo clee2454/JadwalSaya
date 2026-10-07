@@ -116,7 +116,7 @@ const closeModalButton =
 
     0 = Monday
     1 = Tuesday
-    ...
+    ... 
     6 = Sunday
 */
 
@@ -142,6 +142,39 @@ let schedules =
 
 
 /* =========================================
+   GET TODAY
+========================================= */
+
+function getTodayName() {
+
+    const today =
+        new Date().getDay();
+
+    /*
+        JavaScript:
+        Sunday = 0
+        Monday = 1
+        Tuesday = 2
+        ...
+        Saturday = 6
+
+        Our days array:
+        Monday = 0
+        Tuesday = 1
+        ...
+        Sunday = 6
+    */
+
+    const todayIndex =
+        today === 0
+            ? 6
+            : today - 1;
+
+    return days[todayIndex];
+}
+
+
+/* =========================================
    RENDER CALENDAR
 ========================================= */
 
@@ -161,7 +194,13 @@ function renderCalendar() {
     if (selectedDay === null) {
 
         visibleDays = [
-            0, 1, 2, 3, 4, 5, 6
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
         ];
 
     } else {
@@ -182,7 +221,7 @@ function renderCalendar() {
     */
 
     scheduleElement.style.gridTemplateColumns =
-    `52px repeat(${visibleDays.length}, minmax(0, 1fr))`;
+        `70px repeat(${visibleDays.length}, minmax(150px, 1fr))`;
 
 
     /* =====================================
@@ -378,11 +417,12 @@ function updateSelectedDay() {
 
     if (selectedDay === null) {
 
+        // Show today's day instead of "All Days"
         selectedDayLabel.textContent =
-            "All Days";
+            getTodayName();
 
         clearSelectionButton.textContent =
-            "All Days";
+            getTodayName();
 
         return;
     }
@@ -394,8 +434,52 @@ function updateSelectedDay() {
 
     clearSelectionButton.textContent =
         "Show All";
+}
+
+/* =========================================
+   UPDATE TODAY BUTTON
+========================================= */
+
+/*
+    Check the current day every minute.
+
+    This means:
+
+    Monday -> Tuesday
+
+    automatically at midnight,
+    without needing to refresh.
+*/
+
+function updateTodayButton() {
+
+    if (
+        selectedDay === null
+    ) {
+
+        clearSelectionButton.textContent =
+            getTodayName();
+
+    }
 
 }
+
+
+/*
+    Run once immediately.
+*/
+
+
+
+
+/*
+    Check every 60 seconds.
+*/
+
+setInterval(
+    updateTodayButton,
+    60000
+);
 
 
 /* =========================================
@@ -950,5 +1034,11 @@ function escapeHTML(text) {
 ========================================= */
 
 updateSelectedDay();
+setInterval(() => {
 
+    if (selectedDay === null) {
+        updateSelectedDay();
+    }
+
+}, 60000);
 renderCalendar();
